@@ -1,4 +1,4 @@
-package org.example.algorithms_edu.SampleArray;
+package org.example.algorithms_edu.GeneralObject;
 
 public class SamplePerson {
 

@@ -1,9 +1,9 @@
-package org.example.algorithms_edu.SampleArray;
+package org.example.algorithms_edu.AlgorithmsSort;
 
-import org.example.algorithms_edu.AlgorithmsSort.ArrayInObjects;
 import org.example.algorithms_edu.GeneralObject.SamplePerson;
+import org.example.algorithms_edu.SampleArray.ClassDataArray;
 
-public class ClassDataArrayApp {
+public class ObjectSortApp {
 
     public static void main(String[] args) {
         int maxSize = 100;
@@ -21,26 +21,12 @@ public class ClassDataArrayApp {
         arr.insert("Zayzev", "Andrey", 37);
         arr.insert("Turok", "Petr", 38);
 
+        System.out.println("=====================================================");
         arr.displayA();
-
-        String searchKey = "Petrova";
-
-        SamplePerson found;
-        found = arr.find(searchKey);
-        if(found != null) {
-            System.out.println("Found ");
-            found.displayPerson();
-        } else {
-            System.out.println("Can't find " + searchKey);
-        }
-
-        System.out.println("Deleting Turok, Conor, Petrov");
-
-        arr.delete("Turok");
-        arr.delete("Conor");
-        arr.delete("Petrov");
-
+        System.out.println("=====================================================");
+        arr.insertionSort();
         arr.displayA();
-
+        System.out.println("=====================================================");
     }
+
 }
