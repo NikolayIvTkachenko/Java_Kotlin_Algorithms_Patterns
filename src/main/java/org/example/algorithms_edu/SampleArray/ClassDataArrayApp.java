@@ -41,6 +41,5 @@ public class ClassDataArrayApp {
         arr.delete("Petrov");
 
         arr.displayA();
-
     }
 }
