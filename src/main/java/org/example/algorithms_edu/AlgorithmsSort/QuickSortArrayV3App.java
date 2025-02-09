@@ -1,11 +1,11 @@
 package org.example.algorithms_edu.AlgorithmsSort;
 
-public class QuickSortArrayApp {
+public class QuickSortArrayV3App {
 
     public static void main(String[] args) {
         int maxSize = 16;
-        QuickSortArray arr;
-        arr = new QuickSortArray(maxSize);
+        QuickSortArrayV3 arr;
+        arr = new QuickSortArrayV3(maxSize);
 
         for(int j=0; j<maxSize; j++) {
             long n = (int)(Math.random()*99);
@@ -16,4 +16,5 @@ public class QuickSortArrayApp {
         arr.quickSort();
         arr.display();
     }
+
 }
