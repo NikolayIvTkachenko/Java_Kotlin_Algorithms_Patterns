@@ -7,6 +7,10 @@ public class Node {
     Node rightChild;
 
     public void displayNode() {
-
+        System.out.print('{');
+        System.out.print(iData);
+        System.out.print(", ");
+        System.out.print(fData);
+        System.out.print('}');
     }
 }
