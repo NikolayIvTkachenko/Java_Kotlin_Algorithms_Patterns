@@ -1,0 +1,41 @@
+SOLID
+1. Single Responsibility Principle (SRP)
+Definition: A class should have only one reason to change, meaning it should have only one job or responsibility.
+
+2. Open/Closed Principle (OCP)
+Definition: Software entities should be open for extension but closed for modification.
+
+3. Liskov Substitution Principle (LSP)
+Definition: Subtypes must be substitutable for their base types without altering the correctness of the program.
+
+4. Interface Segregation Principle (ISP)
+Definition: Clients should not be forced to depend on interfaces they do not use.
+
+5. Dependency Inversion Principle (DIP)
+Definition: High-level modules should not depend on low-level modules. Both should depend on abstractions.
+Abstractions should not depend on details. Details should depend on abstractions.
+--------------------------------------------------------------------------------------------------------------
+Conclusion
+In software development, adhering to the SOLID principles — Single Responsibility, Open/Closed, Liskov Substitution,
+Interface Segregation, and Dependency Inversion — provides a structured approach to creating maintainable and flexible code.
+Each principle addresses specific aspects of software design, aiming to reduce complexity, increase reusability,
+and facilitate easier maintenance.
+
+Single Responsibility Principle (SRP) ensures that each class has only one reason to change, promoting clarity and
+maintainability by separating responsibilities.
+
+Open/Closed Principle (OCP) encourages software entities to be open for extension but closed for modification,
+allowing new features to be added without altering existing code.
+
+Liskov Substitution Principle (LSP) emphasizes the use of inheritance and polymorphism in a way that does not
+break the functionality of the program, fostering robust and interchangeable components.
+
+Interface Segregation Principle (ISP) advocates for the creation of fine-grained interfaces that are client-specific,
+preventing unnecessary dependencies and promoting code clarity.
+
+Dependency Inversion Principle (DIP) promotes loose coupling by ensuring that high-level modules depend on abstractions
+rather than concrete implementations, enabling easier testing, maintenance, and scalability.
+
+By applying these principles in Java, developers can create software that is easier to understand, extend, and modify.
+Each principle complements the others, forming a cohesive framework for designing object-oriented
+systems that are adaptable to changing requirements and scalable in complexity.

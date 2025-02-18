@@ -1,0 +1,18 @@
+Принципы SOLID
+Служат для того, чтобы ранее созданный код пракически не менять, а вносить дополнения.
+
+1. Single Responsibility Principle (SRP) - Принцип Единственной ответсвенности
+Definition: A class should have only one reason to change, meaning it should have only one job or responsibility.
+
+2. Open/Closed Principle (OCP) - Принцип открытости-закрытости
+Definition: Software entities should be open for extension but closed for modification.
+
+3. Liskov Substitution Principle (LSP) - Принцип подстановки Барбары Лисков
+Definition: Subtypes must be substitutable for their base types without altering the correctness of the program.
+
+4. Interface Segregation Principle (ISP) - Принцип разделения интерфейсов
+Definition: Clients should not be forced to depend on interfaces they do not use.
+
+5. Dependency Inversion Principle (DIP) - Принцип инверсии зависимостей
+Definition: High-level modules should not depend on low-level modules. Both should depend on abstractions.
+Abstractions should not depend on details. Details should depend on abstractions.
