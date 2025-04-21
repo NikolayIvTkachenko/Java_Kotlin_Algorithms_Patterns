@@ -6,6 +6,7 @@ public class ThreadY implements Runnable{
         synchronized (this) {
             for(int iValue=0; iValue < 1000; iValue++) {
                 iTotal = iTotal + iValue;
+                System.out.println(iValue);
                 System.out.println(iTotal);
             }
             notify();
