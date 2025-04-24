@@ -178,6 +178,77 @@ public class UtilsSorts {
                 .orElse(-1);
     }
 
+    public static int maxV1(int[] arr) {
+        int max = arr[0];
+        for(int element: arr) {
+            if(element > max) {
+                max = element;
+            }
+        }
+        return max;
+    }
+
+    public static int maxV2(int[] arr) {
+        int max = Arrays.stream(arr).max().getAsInt();
+        return max;
+    }
+
+    public static <T extends Comparable<T>> T max(T[] arr) {
+        T max = arr[0];
+
+        for(T element : arr) {
+            if(element.compareTo(max) > 0) {
+                max = element;
+            }
+        }
+        return max;
+    }
+
+    public static <T> T max(T[] arr, Comparator<? super T> c) {
+        T max = arr[0];
+        for(T element : arr) {
+            if(c.compare(element, max) > 0) {
+                max = element;
+            }
+        }
+        return max;
+    }
+
+    public static double average(int[] arr) {
+        return sum(arr) / arr.length;
+    }
+
+    public static double sum(int[] arr) {
+        double sum = 0;
+        for(int element: arr) {
+            sum += element;
+        }
+        return sum;
+    }
+
+    public static void reverseV1(int[] arr) {
+        for(int leftHead = 0, rightHead = arr.length - 1; leftHead< rightHead; leftHead++, rightHead--) {
+            int elem = arr[leftHead];
+            arr[leftHead] = arr[rightHead];
+            arr[rightHead] = elem;
+        }
+    }
+
+    public static int[] reverseV2(int[] arr) {
+        int [] reversed = IntStream.rangeClosed(1, arr.length).map(i ->
+                arr[arr.length-1]).toArray();
+        return reversed;
+    }
+
+    public static <T> void reverseV3(T[] arr) {
+        for(int leftHead = 0, rightHead = arr.length-1; leftHead < rightHead; leftHead++, rightHead++) {
+            T element = arr[leftHead];
+            arr[leftHead] = arr[rightHead];
+        }
+    }
+
+
+
     //------------------------------------------
     //---Service Code---
 
@@ -210,7 +281,6 @@ public class UtilsSorts {
 
     private static void swap(int[] arr, int x, int y) {
         int temp = arr[x];
-
         arr[x] = arr[y];
         arr[y] = temp;
     }

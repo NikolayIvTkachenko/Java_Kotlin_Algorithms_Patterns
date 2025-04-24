@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class SampleApp03 {
     public static void main(String[] args) {
@@ -15,10 +16,41 @@ public class SampleApp03 {
         //program05();
         //program06();
         //program07();
+        //program08();
+        //program09();
+        program10();
 
-        program08();
+    }
 
+    public static void program10() {
+        String[] arr = {"One", "Two", "Three", "Four", "Five", "Six"};
+        Stream<String> stream1 = Arrays.asList(arr).stream();
+        Stream<String> stream2 = Arrays.asList(arr).subList(0, 2).stream();
 
+        stream2.forEach(item -> System.out.print(item + " "));
+
+        Stream<String> stream3 = Stream.of(arr);
+        Stream<String> stream4 = Stream.of("Atom", "Electron", "Neutron");
+
+    }
+
+    public static void program09() {
+        //String[] arr = {"One", "Two", "Three", "Four", "Five", "Six"};
+        String[] arr = new String[10];
+        arr[0] = "One";
+        arr[1] = "Two";
+        arr[2] = "Three";
+        arr[3] = "Four";
+        arr[4] = "Five";
+        arr[5] = "Six";
+        System.out.println(arr);
+        Stream<String> arrStream = Arrays.stream(arr);
+        arr[6] = "Seven";
+        arr[7] = "Eight";
+
+        System.out.println(arr);
+
+        arrStream.forEach(item -> System.out.print(item + " "));
     }
 
     public static void program08() {
@@ -33,8 +65,20 @@ public class SampleApp03 {
         System.out.println(result2);
 
         System.out.println("Mismatch");
+        int mi12 = Arrays.mismatch(integers1, integers2);
+        int mi14 = Arrays.mismatch(integers1, integers4);
+        System.out.println(mi12);
+        System.out.println(mi14);
 
+        System.out.println("Compare");
+        int[] intArray1 = {3, 4, 5, 6, 1, 5};
+        int[] intArray2 = {3, 4, 5, 6, 1, 5};
+        int[] intArray3 = {3, 4, 5, 6, 1, 3};
 
+        int i12 = Arrays.compare(intArray1, intArray2);
+        int i13 = Arrays.compare(intArray1, intArray3);
+        System.out.println(i12);
+        System.out.println(i13);
     }
 
     public static void program07() {
