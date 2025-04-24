@@ -76,14 +76,20 @@ public class Task_01 {
         return (int) reversed;
     }
 
-    //Реверс битов
+    //Реверс битов???? Нати решение
+    //https://stackoverflow.com/questions/3165776/reverse-bits-in-number
     public static int reverseInteger03(int x) {
         int b=0;
         while (x!=0){
+            b<<=1;
             b|=( x &1);
             x>>=1;
-            b<<=1;
         }
+//        while (x!=0){
+//            b|=( x &1);
+//            x>>=1;
+//            b<<=1;
+//        }
         return b;
     }
 }

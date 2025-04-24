@@ -1,15 +1,19 @@
 package org.example.sample_program;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-
-
-
+import java.util.*;
 
 public class Task_00 {
     public static void main(String[] args) {
 
-        program01();
+        //program01();
+//        var key1 = isAnagramV1("Hello", "elloh");
+//        System.out.println("key = " + key1);
+
+        var key2 = isAnagramV2("Hello", "elloh");
+        System.out.println("key = " + key2);
+
+        var key3 = isAnagramV2("Hwello", "elloh");
+        System.out.println("key = " + key3);
 
     }
 
@@ -34,5 +38,48 @@ public class Task_00 {
                 .map(Map.Entry::getKey)
                 .orElseThrow(RuntimeException::new);
         System.out.println(firstElement);
+    }
+
+    ////Ппроверка, являются ли две строки аннаграммами
+    private static final int EXTENDED_ASCII_CODES = 256;
+    public static boolean isAnagramV1(String str1, String str2) {
+        int [] chCounts = new int[EXTENDED_ASCII_CODES];
+        char[] chStr1 = str1.replaceAll("\\s","").toLowerCase().toCharArray();
+        char[] chStr2 = str2.replaceAll("\\s","").toLowerCase().toCharArray();
+
+        System.out.println(chStr1);
+        System.out.println(chStr2);
+
+        if(chStr1.length != chStr2.length) {
+            return false;
+        }
+
+        for(int i = 0; i < chStr1.length; i++) {
+            chCounts[chStr1[i]]++;
+            chCounts[chStr2[i]]--;
+        }
+
+        for(int i = 0; i < chCounts.length; i++) {
+            //System.out.println(chCounts[i]);
+            if(chCounts[i] != 0) return false;
+        }
+        return true;
+    }
+
+    public static boolean isAnagramV2(String str1, String str2) {
+        System.out.println(str1);
+        System.out.println(str2);
+        var lowerStr1 = str1.trim().replaceAll("\\s","").toLowerCase().toCharArray();
+        var lowerStr2 = str2.trim().replaceAll("\\s","").toLowerCase().toCharArray();
+        System.out.println(lowerStr1);
+        System.out.println(lowerStr2);
+
+        if(str1.length() != str2.length()) {
+            return false;
+        }
+        Arrays.sort(lowerStr1);
+        Arrays.sort(lowerStr2);
+
+        return Arrays.equals(lowerStr1, lowerStr2);
     }
 }
