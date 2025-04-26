@@ -18,9 +18,27 @@ public class SampleApp03 {
         //program07();
         //program08();
         //program09();
-        program10();
+        //program10();
+
+        program11();
 
     }
+
+    //Start ==> HashMap
+    public static void program12() {
+
+
+
+    }
+
+
+    public static void program11() {
+
+
+
+    }
+    //End ==> HashMap
+
 
     public static void program10() {
         String[] arr = {"One", "Two", "Three", "Four", "Five", "Six"};
