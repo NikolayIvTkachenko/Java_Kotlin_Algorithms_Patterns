@@ -1,4 +1,4 @@
-package org.example.article_oop_solid.solid;
+package org.example.article_oop_solid.solid.before;
 
 import java.util.Date;
 import java.util.UUID;
@@ -14,6 +14,14 @@ public class MilitaryRobot extends BaseRobot implements UpdateState {
         this.xPosition = xStart;
         this.yPosition = yStart;
         this.attack = attack;
+    }
+
+    public void sendMessage() {
+        String messagePosition = "X: " +xPosition + " , Y: " + yPosition;
+        String messageData = "UUID: " + uuid + " , attack point: " + attack
+                + " , power: " + power + " , shield: " + shield;
+        System.out.println(messagePosition);
+        System.out.println(messageData);
     }
 
     public Integer getAttack() {

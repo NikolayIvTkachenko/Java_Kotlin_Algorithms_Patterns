@@ -1,4 +1,4 @@
-package org.example.article_oop_solid.solid;
+package org.example.article_oop_solid.solid.after;
 
 import java.util.Date;
 import java.util.UUID;

@@ -1,4 +1,4 @@
-package org.example.article_oop_solid.solid;
+package org.example.article_oop_solid.solid.before;
 
 import java.util.Date;
 import java.util.UUID;
@@ -14,6 +14,14 @@ public class TransportRobot extends BaseRobot implements UpdateState {
         this.xPosition = xStart;
         this.yPosition = yStart;
         this.cargoWeight = 0;
+    }
+
+    public void sendMessage() {
+        String messagePosition = "X: " +xPosition + " , Y: " + yPosition;
+        String messageData = "UUID: " + uuid + " , cargo point: " + cargoWeight
+                + " , power: " + power + " , shield: " + shield;
+        System.out.println(messagePosition);
+        System.out.println(messageData);
     }
 
     public Integer getCargoWeight() {
