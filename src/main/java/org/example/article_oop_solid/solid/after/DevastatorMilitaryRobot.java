@@ -1,18 +1,8 @@
 package org.example.article_oop_solid.solid.after;
 
-public class DevastatorMilitaryRobot extends MilitaryRobot implements OperationBuilding{
+public class DevastatorMilitaryRobot extends MilitaryRobot implements OperationDestroyBuilding {
     public DevastatorMilitaryRobot(Integer xStart, Integer yStart, Integer serialNumber, Integer attack) {
         super(xStart, yStart, serialNumber, attack);
-    }
-
-    @Override
-    public void repairBuilding(BaseBuilding baseBuilding) {
-        //Данный метод не делает ничего
-    }
-
-    @Override
-    public void buildBuilding(BaseBuilding baseBuilding) {
-        //Данный метод не делает ничего
     }
 
     @Override
